@@ -3,14 +3,14 @@ CREATE SEQUENCE pessoa_seq;
 CREATE TABLE pessoa (
 	codigo BIGINT PRIMARY KEY DEFAULT NEXTVAL ('pessoa_seq'),
 	nome VARCHAR(50) NOT NULL,
-	ativo boolean,
+	ativo boolean NOT NULL,
 	logradouro VARCHAR(250),
-	numero VARCHAR(50) NOT NULL,
-	complemento VARCHAR(50) NOT NULL,
-	bairro VARCHAR(50) NOT NULL,
-	cep VARCHAR(50) NOT NULL,
-	cidade VARCHAR(50) NOT NULL,
-	estado VARCHAR(50) NOT NULL
+	numero VARCHAR(50) ,
+	complemento VARCHAR(50),
+	bairro VARCHAR(50) ,
+	cep VARCHAR(50),
+	cidade VARCHAR(50),
+	estado VARCHAR(50) 
 	
 ) ;
 
