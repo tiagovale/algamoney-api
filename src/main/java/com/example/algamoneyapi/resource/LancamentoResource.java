@@ -43,7 +43,7 @@ public class LancamentoResource {
 	}
 
 	@GetMapping("/{codigo}")
-	public ResponseEntity<Lancamento> buscarPeloCodigo(@PathVariable Long codigo) {
+	public ResponseEntity<Lancamento> buscarPeloCodigo(@Valid @PathVariable Long codigo) {
 		Lancamento lancamento = lancamentoRepository.findOne(codigo);
 		return lancamento != null ? ResponseEntity.ok(lancamento) : ResponseEntity.notFound().build();
 	}
